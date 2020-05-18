@@ -1,0 +1,52 @@
+update bacteria set fk_clermont_typing = null where fk_clermont_typing = (select x.id from clermont_typing x where x.name = '-');
+delete from clermont_typing where name = '-';
+update bacteria set fk_serovar = null where fk_serovar = (select x.id from serovar x where x.name = '-');
+delete from serovar where name = '-';
+update bacteria set fk_sequencer = null where fk_sequencer = (select x.id from sequencer x where x.name = '-');
+delete from sequencer where name = '-';
+
+update bacteria set wzi = null where wzi = '-';
+update bacteria set wzc = null where wzc = '-';
+
+delete from virulome_bacteria where fk_virulome = (select x.id from virulome x where x.name = '-');
+delete from virulome where name = '-';
+delete from plasmidome_bacteria where fk_plasmidome = (select x.id from plasmidome x where x.name = '-');
+delete from plasmidome where name = '-';
+
+update serotype set fk_antigen_o = null where fk_antigen_o = (select x.id from antigen_o x where x.name = '-');
+delete from antigen_o where name = '-';
+update serotype set fk_antigen_h = null where fk_antigen_h = (select x.id from antigen_h x where x.name = '-');
+delete from antigen_h where name = '-';
+
+delete from b_lactam_resistome where fk_b_lactam = (select x.id from b_lactam x where x.name = '-');
+delete from b_lactam where name = '-';
+delete from phenicol_resistome where fk_phenicol = (select x.id from phenicol x where x.name = '-');
+delete from phenicol where name = '-';
+delete from colistin_resistome where fk_colistin = (select x.id from colistin x where x.name = '-');
+delete from colistin where name = '-';
+delete from tetracycline_resistome where fk_tetracycline = (select x.id from tetracycline x where x.name = '-');
+delete from tetracycline where name = '-';
+delete from glycopeptide_resistome where fk_glycopeptide = (select x.id from glycopeptide x where x.name = '-');
+delete from glycopeptide where name = '-';
+delete from aminoglycoside_resistome where fk_aminoglycoside = (select x.id from aminoglycoside x where x.name = '-');
+delete from aminoglycoside where name = '-';
+delete from fosfomycin_resistome where fk_fosfomycin = (select x.id from fosfomycin x where x.name = '-');
+delete from fosfomycin where name = '-';
+delete from trimethoprim_resistome where fk_trimethoprim = (select x.id from trimethoprim x where x.name = '-');
+delete from trimethoprim where name = '-';
+delete from nitroimidazole_resistome where fk_nitroimidazole = (select x.id from nitroimidazole x where x.name = '-');
+delete from nitroimidazole where name = '-';
+delete from macrolide_resistome where fk_macrolide = (select x.id from macrolide x where x.name = '-');
+delete from macrolide where name = '-';
+delete from quinolone_resistome where fk_quinolone = (select x.id from quinolone x where x.name = '-');
+delete from quinolone where name = '-';
+delete from sulphonamide_resistome where fk_sulphonamide = (select x.id from sulphonamide x where x.name = '-');
+delete from sulphonamide where name = '-';
+delete from rifampicin_resistome where fk_rifampicin = (select x.id from rifampicin x where x.name = '-');
+delete from rifampicin where name = '-';
+delete from fusidic_acid_resistome where fk_fusidic_acid = (select x.id from fusidic_acid x where x.name = '-');
+delete from fusidic_acid where name = '-';
+delete from oxazolidinone_resistome where fk_oxazolidinone = (select x.id from oxazolidinone x where x.name = '-');
+delete from oxazolidinone where name = '-';
+delete from heavy_metal_bacteria where fk_heavy_metal = (select x.id from heavy_metal x where x.name = '-');
+delete from heavy_metal where name = '-';
